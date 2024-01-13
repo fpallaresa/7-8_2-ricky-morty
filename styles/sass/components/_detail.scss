@@ -1,0 +1,294 @@
+.detail{
+    width: 100%;
+    margin:0 auto;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include adaptTo('not-mobile'){
+        flex-direction: row;
+        padding: 0;
+        align-items: flex-start;
+        min-height: 70vh;
+    }
+
+    @include adaptTo('desktop-l'){
+        width:1024px;
+        margin: 60px auto;
+        box-shadow: 2px 6px 26px -14px rgba(0,0,0,0.5);
+        background-color: $secondary-color;
+    }
+
+    @include adaptTo('desktop-xl'){
+        width:1024px;
+        margin: 60px auto;
+        box-shadow: 2px 6px 26px -14px rgba(0,0,0,0.5);
+        background-color: $secondary-color;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+
+        @include adaptTo('not-mobile'){
+            width:40%;
+            margin: 0;
+            padding:40px;
+        }
+
+        @include adaptTo('desktop-m'){
+            width:30%;
+        }
+
+        @include adaptTo('desktop-l'){
+            background-color: $secondary-color;
+            min-height: 550px;
+            justify-content: center;
+            width:30%;
+            margin: auto;
+        }
+
+        @include adaptTo('desktop-xl'){
+            background-color: $secondary-color;
+            min-height: 550px;
+            justify-content: center;
+            width:30%;
+            margin: auto;
+        }
+
+        &--locations {
+            background-color: $senary-color;
+            text-align: center;
+            border-radius:20px;
+            position:relative;
+
+            @include adaptTo('not-mobile'){
+                font-size: 40px;
+                background-color: unset;
+                padding:50px 20px;
+            }
+
+            @include adaptTo('desktop-l'){
+                &::after {
+                    content:"";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-right:3px solid $nonary-color;
+                    height: 120px;
+                    margin: auto;
+                }
+            }
+
+            @include adaptTo('desktop-xl'){
+                &::after {
+                    content:"";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-right:3px solid $nonary-color;
+                    height: 120px;
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    &__img{
+        width: 100%;
+        max-width:200px;
+        border-radius:100px;
+        border:4px solid $nonary-color;
+    }
+
+    &__title{
+        width: auto;
+        text-align: center;
+        font-weight: 700;
+        font-size: 20px;
+        color:$octonary-color;
+        padding-top: 15px;
+        padding-bottom: 5px;
+
+        &--uppercase {
+            text-transform: uppercase;
+        }
+
+        &--border {
+            border-bottom: 2px solid $octonary-color;
+        }
+
+        &--locations {
+            padding-bottom:15px;
+
+            @include adaptTo('not-mobile'){
+                font-size: 40px;
+            }
+        }
+    }
+
+    &__info-container{
+        margin: 30px 0;
+        width: 100%;
+        
+        @include adaptTo('not-mobile'){
+            background-color: $secondary-color;
+            width:60%;
+            margin: 0;
+            padding: 45px 30px;
+            min-height: 70vh;
+        }
+
+        @include adaptTo('desktop-m'){
+            width:70%;
+            
+        }
+
+        @include adaptTo('desktop-l') {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 550px;
+            width:70%;
+            margin: auto;
+        }
+
+        @include adaptTo('desktop-xl') {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 550px;
+            width:70%;
+            margin: auto;
+        }
+    }
+
+    &__info-status {
+        display:flex;
+        width: 100%;
+        max-width:320px;
+        gap: 10px;
+        justify-content: flex-start;
+        text-transform: uppercase;
+
+        .detail__info {
+            text-align:center;
+            font-size:14px;
+
+            &--option-alive {
+                background-color: $denary-color;
+            }
+            
+            &--option-dead {
+                background:$undenary-color;
+            }
+    
+            &--option-unknown {
+                background:$quinary-color;
+            }
+        }
+    }
+
+    &__specifications{
+        display:flex;
+        flex-direction: column;
+
+        @include adaptTo('not-tablet'){
+            flex-direction: row;
+            gap: 30px;
+        }
+    }
+
+    &__info-specs {
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+
+        @include adaptTo('not-mobile'){
+            margin-top: 20px;
+        }    
+    }
+
+    &__info-title{
+        font-size: 14px;
+        font-weight: 700;
+        color:$quinary-color;
+    }
+
+    &__info {
+        background-color: $senary-color;
+        width:100%;
+        border-radius:20px;
+        font-size:18px;
+        padding:5px 10px;
+        margin: 5px 0;
+
+        &--link {
+            background-color: $quaternary-color;
+        }
+
+        &--header {
+            background-color: $senary-color;
+            text-align: center;
+            margin: 5px 0 10px;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color:$tertiary-color;
+
+        & img {
+            width:90px;
+            border: 2px solid $nonary-color ;
+            border-radius: 100px;
+        }
+    }
+
+    &__info-episodes {
+        margin-top: 10px;
+
+        @include adaptTo('not-mobile'){
+            margin-top: 20px;
+        }   
+
+        .detail__info {
+            width:50px;
+            display: flex;
+            justify-content: center;
+            margin-bottom:0;
+        }
+    }
+
+    &__info-residents {
+        margin-top: 10px;
+
+        @include adaptTo('not-mobile'){
+            margin-top: 20px;
+        } 
+
+        .detail__info {
+            background-color: unset;
+            width: 90px;
+            height: 90px;
+            border-radius:initial;
+            padding:0;
+            margin: 0;
+        }
+    }
+
+    &__info-links {
+        display:flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top:5px;
+    }
+
+}

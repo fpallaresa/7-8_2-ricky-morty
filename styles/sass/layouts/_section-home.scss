@@ -1,0 +1,59 @@
+.section-home{
+    text-align: center;
+    padding: 55px 20px 0;
+
+    @include adaptTo('not-mobile'){
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &__title{
+        font-size: 14px;
+        font-family: 'Poppins';
+        margin: 30px auto;
+        @include adaptTo('not-mobile'){
+            font-size: 24px;
+        }       
+    }
+
+    &__description{
+        font-size: 16px;
+        line-height:24px;
+        margin: auto;
+        @include adaptTo('not-mobile'){
+            font-size: 20px;
+            line-height:30px;
+            max-width:400px;
+        }
+    }
+
+    &__separator {
+        border-bottom: solid $primary-color 1px;
+        width:124px;
+        margin: 25px auto;
+
+        @include adaptTo('not-mobile'){
+            margin: 30px auto 80px;
+        }
+
+        @include adaptTo('desktop-xl'){
+            margin: 30px auto 65px;
+        }
+    }
+
+    &--navigation {
+        
+        @include adaptTo('not-tablet'){
+            background-color: $tertiary-color;
+            margin: 0;
+            width:100%;
+            padding:60px 40px;
+        }
+
+        @include adaptTo('desktop-xl'){
+            margin:0 auto;
+            border-radius: 20px;
+            max-width: 1320px;
+        }
+    }
+}

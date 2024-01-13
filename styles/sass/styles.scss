@@ -1,0 +1,21 @@
+@import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'base/typo';
+@import 'base/reset';
+@import 'layouts/footer';
+@import 'layouts/main';
+@import 'layouts/header';
+@import 'layouts/section-home';
+@import 'layouts/nav';
+@import 'layouts/section';
+@import 'components/card';
+@import 'components/detail';
+
+body{
+    background-color: $duodenary-color;
+    color: $primary-color;
+}
+
+button {
+    cursor: pointer;
+}

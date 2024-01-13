@@ -1,0 +1,101 @@
+.header{
+    text-align: center;
+    height: 50px;
+    background-color: $octonary-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    @include adaptTo('not-mobile'){
+        height: 90px;
+    }
+
+    @include adaptTo('desktop-xl'){
+        max-width: 1280px;
+    }
+
+    .header__back {
+        color:$secondary-color;
+        font-size:20px;
+        text-decoration:none;
+        position: absolute;
+        top: 0.7rem;
+        left: 1.2rem;
+
+        @include adaptTo('not-mobile'){
+            font-size:36px;
+            top: 1.2rem;
+            left: 2rem;
+        }
+    
+    }
+
+    &__title{
+        font-size: 16px;
+        color: $secondary-color;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        @include adaptTo('not-mobile'){
+            font-size: 24px;
+        }
+    }
+
+    &__subtitle{
+        font-size: 14px;
+        font-weight:700;
+        display: block;
+        color: $secondary-color;
+        @include adaptTo('not-mobile'){
+            font-size: 20px;
+        }
+    }
+    
+    &--home{
+        background-image: url(../../assets/images/rick-y-morty-cabecera.png);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-color: $duodenary-color;
+        height: 100vh;
+        align-items: flex-start;
+
+        .header__back {
+            display:none;
+        }
+
+        @include adaptTo('desktop-xl'){
+            max-width: 1320px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-size: cover;
+            margin: 0 auto 20px auto; 
+        }
+        
+
+        .header__title{
+            font-size: 36px;
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            margin-top: 120px;
+            @include adaptTo('not-mobile'){
+                font-size: 45px;
+            }
+        }
+
+        .header__subtitle{
+            font-size: 28px;
+            font-weight:700;
+            color: $secondary-color;
+            text-decoration: none;
+
+            @include adaptTo('not-mobile'){
+                font-size: 32px;
+            }
+        }
+
+    }
+}
+

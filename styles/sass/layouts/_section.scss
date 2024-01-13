@@ -1,0 +1,121 @@
+.section{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include adaptTo('desktop-l'){
+        width: 100%;
+        margin: auto;
+    }
+    
+    @include adaptTo('desktop-xl'){
+        max-width: 1280px;
+        margin: auto;
+    }
+
+    &__title{
+        font-family: 'Poppins';
+        font-size: 14px;
+        font-weight:700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $nonary-color;
+        color:$octonary-color;
+        height: 35px;
+        width: 100%;
+
+        @include adaptTo('not-mobile'){
+            font-size: 18px;
+            height: 45px;
+        }
+
+        @include adaptTo('desktop-xl'){
+            max-width: 1280px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            margin: auto;
+        }
+    }
+
+    &__finder {
+        width:100%;
+        margin: 25px auto 0;
+    }
+
+    &__finder-content {
+        font-size: 18px;
+        color: $tertiary-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 0 10px;
+        max-width:700px;
+
+        @include adaptTo('not-mobile'){
+            margin: 0 auto;
+        }
+    }
+
+    &__finder-icon {
+        border-right: 1px solid $nonary-color;
+        padding-right:10px;
+        position: absolute;
+        left: 15px;
+        border-left:none;
+        border-top:none;
+        border-bottom:none;
+        background-color: $secondary-color;
+        font-size:18px;
+    }
+
+    &__input {
+        border-radius:27px;
+        box-shadow: 2px 6px 26px -14px rgba(0,0,0,0.5);
+        max-width:700px;
+        height:44px;
+        width: 100%;
+        border: 0;
+
+        &[type=text]{
+            font-size:18px;
+            padding-left: 60px;
+            color:$octonary-color;
+
+            @include adaptTo('not-mobile'){
+                font-size:24px;
+            }
+        }
+
+        @include adaptTo('not-mobile'){
+            height:50px;
+        }
+    }
+
+    &__container{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top:25px;
+    }
+
+    &__link {
+        background-color:$tertiary-color;
+        color:$secondary-color;
+        width:120px;
+        margin: 65px auto;
+        border-radius:26px;
+        font-weight:700;
+        font-size:16px;
+        padding: 5px 0;
+        border:none;
+
+        @include adaptTo('not-mobile'){
+            font-size: 24px;
+            width:150px;
+        }
+    }
+}
